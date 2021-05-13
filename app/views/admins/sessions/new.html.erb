@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-sm-3 col-sm-6">
+      <div class="">管理者ログイン</div>
+
+      <%= form_with model: @admin, url: admin_session_path, local: true do |f| %>
+        <div class="field">
+          <%= f.label :email, 'メールアドレス' %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+      
+        <div class="field">
+          <%= f.label :password, 'パスワード' %>
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+      
+      
+        <div class="actions">
+          <%= f.submit "ログイン", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render "admins/shared/links" %>

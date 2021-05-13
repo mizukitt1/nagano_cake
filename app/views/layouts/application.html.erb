@@ -10,6 +10,33 @@
   </head>
 
   <body>
+    <div class="border border-dark border-bottom" style="margin:10px;">
+    <header>
+      <div class="border border-dark border-bottom" style="padding:10px;">
+      <div class="container">
+        <div class="row">
+      <div class="col-xs-6">LOGO</div>
+      
+      <div class="col-xs-6">
+      <ul class="nav pull-right nav-pills">
+        <li>
+          <%= link_to "About", admin_root_path, class: "btn btn-outline-dark" %>
+        </li>
+        <li>
+          <%= link_to "商品一覧", items_path, class: "btn btn-outline-dark" %>
+        </li>
+        <li>
+          <%= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-dark" %>
+        </li>
+        <li>
+          <%= link_to "ログイン", new_customer_session_path, class: "btn btn-outline-dark" %>
+        </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

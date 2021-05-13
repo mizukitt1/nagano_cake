@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-sm-3 col-sm-6">
+      <div class="">商品一覧</div>
+      
+      <table class="table">
+        <thead>
+          <th>商品ID</th>
+          <th>商品名</th>
+          <th>税抜価格</th>
+          <th>ジャンル</th>
+          <th>ステータス</th>
+        </thead>
+        <tbody>
+      
+      <% @items.each do |item| %>
+      <tr>
+        <td><%= item.id %></td>
+        <td><%= item.name %></td>
+        <td><%= item.price %></td>
+        <td><%= item.genre.id %></td>
+        <td><%= item.is_active %></td>
+      </tr>
+      <% end %>
+    
+    
+    </div>
+  </div>
+</div>
